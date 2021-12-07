@@ -1,0 +1,13 @@
+# 运行命令：docker-compose up -d
+# -d: detatch and make it running at the background.
+# If you will not use the -d then you will need to do ctrl + c to finish it from running.
+
+version: "3"
+services:
+  db:
+    image:  postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: myPass!23
